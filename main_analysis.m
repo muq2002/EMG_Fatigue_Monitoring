@@ -56,7 +56,7 @@ plot(features_channel_1(1:15,4), features_channel_1(1:15,5),'*r'); hold on;
 plot(features_channel_1(15:end,4), features_channel_1(15:end,5),'*g');
 title('Channel 1'); xlabel('RMS'); ylabel('ZC'); grid on;
 
-figure(3);
+figure(4);
 plot(features_channel_2(1:15,4), features_channel_2(1:15,5),'*r'); hold on;
 plot(features_channel_2(15:end,4), features_channel_2(15:end,5),'*g');
 title('Channel 2'); xlabel('RMS'); ylabel('ZC'); grid on;
