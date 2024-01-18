@@ -52,11 +52,28 @@ for selected_window = 1:number_window
 end
 
 figure(3);
-plot(features_channel_1(1:15,4), features_channel_1(1:15,5),'*r'); hold on;
-plot(features_channel_1(15:end,4), features_channel_1(15:end,5),'*g');
-title('Channel 1'); xlabel('RMS'); ylabel('ZC'); grid on;
+subplot(2,2, 1);
+plot(features_channel_1(1:15,3), features_channel_1(1:15,4),'*r'); hold on;
+plot(features_channel_1(15:end,3), features_channel_1(15:end,4),'ob');
+title('Channel 1: RMS VS ZC'); legend('Noraml EMG','Fatigue EMG');
+xlabel('RMS'); ylabel('ZC'); grid on; hold off;
+
+subplot(2,2, 2);
+plot(features_channel_1(1:15,3), features_channel_1(1:15,5),'*r'); hold on;
+plot(features_channel_1(15:end,3), features_channel_1(15:end,5),'ob');
+title('Channel 1: RMS VS SSC'); legend('Noraml EMG','Fatigue EMG');
+xlabel('RMS'); ylabel('SSC'); grid on; hold off;
 
 figure(4);
-plot(features_channel_2(1:15,4), features_channel_2(1:15,5),'*r'); hold on;
-plot(features_channel_2(15:end,4), features_channel_2(15:end,5),'*g');
-title('Channel 2'); xlabel('RMS'); ylabel('ZC'); grid on;
+subplot(2,2, 1);
+plot(features_channel_2(1:15,3), features_channel_2(1:15,4),'*r'); hold on;
+plot(features_channel_2(15:end,3), features_channel_2(15:end,4),'ob');
+title('Channel 2: RMS VS ZC');legend('Noraml EMG', 'Fatigue EMG');
+xlabel('RMS'); ylabel('ZC'); grid on; hold off;
+
+subplot(2,2, 2);
+plot(features_channel_2(1:15,3), features_channel_2(1:15,5),'*r'); hold on;
+plot(features_channel_2(15:end,3), features_channel_2(15:end,5),'ob');
+title('Channel 2: RMS VS SSC'); legend('Noraml EMG','Fatigue EMG');
+xlabel('RMS'); ylabel('SSC'); grid on; hold off;
+
