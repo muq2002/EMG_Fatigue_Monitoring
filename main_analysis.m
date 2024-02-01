@@ -1,7 +1,7 @@
 clear; clc; close all;
 
 %% Reading Data
-emg_data = readmatrix('data/subject02.csv');
+emg_data = readmatrix('data/subject03m.csv');
 fs = 2000;
 number_samples = length(emg_data);
 

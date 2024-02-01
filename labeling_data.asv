@@ -1,0 +1,7 @@
+function out = labeling_data(signal)
+    total_number_of_rows = length(trials_subject_1)
+    emg_data = zeros(total_number_of_rows, 3);
+    
+    % Apply the fatigue condition on data wher
+    half_of_emg1 = length(trials_subject_1) / 2;
+end
