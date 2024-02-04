@@ -1,7 +1,7 @@
 function out = selective_feature(emg_data, fs)
     % Split into channels
-    channel_1 = emg_data(:,2);
-    channel_2 = emg_data(:,3);
+    channel_1 = emg_data(:,2); % channel 1
+    channel_2 = emg_data(:,3); % chanenl 2
 
     % Segmentation
     window_size = 2 * fs;
