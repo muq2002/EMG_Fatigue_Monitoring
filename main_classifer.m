@@ -13,7 +13,7 @@ trials_subject_3 = selective_feature(emg_data3, fs);
 emg_data = [
     labeling_data(trials_subject_1);
     labeling_data(trials_subject_2);
-    % labeling_data(trials_subject_3);
+    labeling_data(trials_subject_3);
     ];
 % Split data
 pre_train = 0.8 * length(emg_data);
@@ -40,14 +40,14 @@ xlabel('RMS'); ylabel('SSC'); grid on; hold off;
 % becuase the linear relationship between the features.
 X = train_emg_data(:, 1:2);
 Y = train_emg_data(:, 3);
-
-rng default
-% SVM
-SVMModel = fitcsvm(X,Y,'OptimizeHyperparameters','auto', ...
-    'HyperparameterOptimizationOptions',struct('AcquisitionFunctionName', ...
-    'expected-improvement-plus'))
-CVSVMModel = crossval(SVMModel);
-classLoss = kfoldLoss(CVSVMModel)
-
-% Trees
-Mdl = fitctree(X,Y,'OptimizeHyperparameters','auto')
+% 
+% rng default
+% % SVM
+% SVMModel = fitcsvm(X,Y,'OptimizeHyperparameters','auto', ...
+%     'HyperparameterOptimizationOptions',struct('AcquisitionFunctionName', ...
+%     'expected-improvement-plus'))
+% CVSVMModel = crossval(SVMModel);
+% classLoss = kfoldLoss(CVSVMModel)
+% 
+% % Trees
+% Mdl = fitctree(X,Y,'OptimizeHyperparameters','auto')

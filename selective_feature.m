@@ -22,5 +22,5 @@ function out = selective_feature(emg_data, fs)
             calcalate_features(trials_channel_2(selected_window, :), fs);
     end
     % I select the index is 3 to RMS feature and index 4 to ZC feature
-    out = [features_channel_1(:,3:4); features_channel_2(:,3:4)];
+    out = [features_channel_1(:,1:8); features_channel_2(:,1:8)];
 end
